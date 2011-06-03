@@ -1,15 +1,20 @@
-Before you start firing the baby up, you'll need to run getDojo.sh in both js/dojo-src and js/dojo-1.4.1.
+Before you start firing the baby up, you'll need to run getDojo.sh in both js/dojo-src and js/dojo-1.6.
 
 These scripts will download the base dojo releases for you. I've not added them by default because they're HUGE! Also, I think it's good practise to have a completely clean dojo release every time you do a build. If you want to patch it, you should create a 'patches' module in your own namespace and add the patches either as part of the build process, or by writing code that updates itself. Otherwise upgrades will be very painful.
 
-Oh, and run getDojo scripts from within the js/dojo-src and js/dojo-1.4.1 directories too please. I should probably fix that.
+Oh, and run getDojo scripts from within the js/dojo-src and js/dojo-1.6 directories too please. I should probably fix that.
 
 
 Now, to do a build, go to the 'js' directory and run 'makeRelease.sh'. This runs the dojo build system and creates another directory called dojo-ourRelease that sits alongside the dojo-src and dojo-1.4.1 directories.
 
 The general idea is as follows:
 
- * dojo-1.4.1: A release of Dojo. Use for doing development work
+ * dojo-1.6: A release of Dojo. Use for doing development work
  * dojo-src: A source release of Dojo. Use this for packaging only
  * dojo-ourRelease: The released version of dojo. Use this for your live systems
 
+The PHP file (testBuildSystem.php) checks to see if you're in development (hosted on localhost) or deployment (anything else, i.e. 127.0.0.1). This is obviously not production ready, but the point here is to show how to setup dojo. Once you've done a build using the instructions above, load the PHP page from both hosts and check out the source and the net tab to see which resources are being downloaded.
+
+Enjoy...
+
+Tom

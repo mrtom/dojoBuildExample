@@ -12,7 +12,7 @@
     <head>
         <title>Dojo Buildsystem Test</title>
         
-        <link rel="stylesheet" href="js/dojo-1.6.1/dijit/themes/claro/claro.css" />
+        <link rel="stylesheet" href="js/dojo-1.6/dijit/themes/claro/claro.css" />
         <style type="text/css">
             html, body, .container {
                 width: 100%;    /* make the body expand to fill the visible window */
@@ -43,10 +43,10 @@
 
         <?php if($isDeployment) { ?>
             <script type="text/javascript" src="js/dojo-ourRelease/dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true"></script>
-            <script type="text/javascript" src="js/dojo-ourRelease/dojo/exampleRelease.js"</script>
+            <script type="text/javascript" src="js/dojo-ourRelease/yourCompany/example/exampleRelease.js"</script>
             <script type="text/javascript" src="js/dojo-ourRelease/dijit/dijit.js"></script>
         <?php } else { ?>
-            <script type="text/javascript" src="js/dojo-1.6.1/dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true, modulePaths:{'yourCompany': '../../yourCompany' }"></script>
+            <script type="text/javascript" src="js/dojo-1.6/dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true, modulePaths:{'yourCompany': '../../yourCompany' }"></script>
         <?php } ?>
 
         <script type="text/javascript">
