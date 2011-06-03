@@ -1,3 +1,5 @@
+This project shows how to use the Dojo Build System. It creates a really simple single page app with some custom modules, and demonstrates how - in development - you can load the modules individually. But for deployment you can package and minimize those modules into a single 'layer' and use that. This reduces the number of HTTP requests, and significantly speeds up your application.
+
 Before you start firing the baby up, you'll need to run getDojo.sh in both js/dojo-src and js/dojo-1.6.
 
 These scripts will download the base dojo releases for you. I've not added them by default because they're HUGE! Also, I think it's good practise to have a completely clean dojo release every time you do a build. If you want to patch it, you should create a 'patches' module in your own namespace and add the patches either as part of the build process, or by writing code that updates itself. Otherwise upgrades will be very painful.
